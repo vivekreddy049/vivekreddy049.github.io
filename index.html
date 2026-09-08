@@ -8,26 +8,36 @@
       name="description"
       content="Vivek Reddy builds LLM pipelines, retrieval systems, OCR and document-understanding tooling, and multi-agent backends."
     />
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
   <body>
     <main class="page">
       <article class="sheet" aria-label="Vivek Reddy portfolio">
+        <nav class="topnav" aria-label="Primary navigation">
+          <a class="active" href="/">Vivek Reddy</a>
+          <a href="#work">Projects</a>
+          <a href="#about">About</a>
+        </nav>
+
         <header class="intro">
-          <p class="eyebrow">AI / ML Engineer</p>
           <h1>Vivek Reddy</h1>
-          <!-- Optional, matches the reference layout. Uncomment the script you use:
-          <p class="devanagari">వివేక్ రెడ్డి</p>
-          <p class="devanagari">विवेक रेड्डी</p>
-          -->
+          <p class="subname">AI / ML Engineer</p>
           <p class="summary">
             Building LLM pipelines, retrieval systems, and document understanding — turning messy real-world
             input into structures a program can actually use.
           </p>
-          <p class="location">Hyderabad, India</p>
+          <p class="quicklinks">
+            Links:
+            <a href="mailto:vivekreddyiitg@gmail.com">Email</a>
+            <a href="https://github.com/vivekreddy049">GitHub</a>
+            <a href="https://www.linkedin.com/in/vivek">LinkedIn</a>
+          </p>
+          <!-- Drop a square photo at assets/vivek.jpg and uncomment:
+          <img class="portrait" src="./assets/vivek.jpg" alt="Vivek Reddy" />
+          -->
         </header>
 
-        <section>
+        <section id="about">
           <h2>About</h2>
           <div class="copy">
             <p>
@@ -36,20 +46,20 @@
               structured form, and keeping the output grounded enough to trust.
             </p>
             <p>
-              Right now I am an AI/ML intern at Flagestrator in Hyderabad, where I build PaddleOCR pipelines that
-              pull equipment tags, pipelines, and annotations out of P&amp;ID engineering diagrams into structured
-              JSON, and low-latency live transcription on top of the Sarvam LiveKit SDK.
+              Currently, I am an AI/ML intern at Flagestrator, where I build PaddleOCR pipelines that pull
+              equipment tags, pipelines, and annotations out of P&amp;ID engineering diagrams into structured JSON,
+              and low-latency live transcription on top of the Sarvam LiveKit SDK.
             </p>
             <p>
               I am finishing a B.Tech in Mathematics and Computer Science at
               <a href="https://www.iitg.ac.in/">IIT Guwahati</a>. My own projects keep circling the same problem:
-              retrieval that stays honest — LangChain and LangGraph orchestration, ChromaDB and FAISS vector search,
-              Neo4j knowledge graphs, FastAPI services behind JWT, all containerised and shipped through CI.
+              retrieval that stays honest — LangChain and LangGraph orchestration, ChromaDB and FAISS vector
+              search, Neo4j knowledge graphs, and FastAPI services behind JWT, containerised and shipped through CI.
             </p>
             <p>
-              I am drawn to retrieval-augmented systems, multi-agent orchestration, document and diagram
-              understanding, and the unglamorous work of making these pipelines reproducible instead of
-              impressive once.
+              Right now, I am drawn to retrieval-augmented systems, multi-agent orchestration, document and diagram
+              understanding, model deployment, and the unglamorous work of making these pipelines reproducible
+              instead of impressive once.
             </p>
           </div>
         </section>
@@ -61,7 +71,6 @@
               <p class="time">Jun 2026 - Present</p>
               <div>
                 <h3>AI/ML Intern, Flagestrator</h3>
-                <p class="muted">Hyderabad</p>
                 <ul>
                   <li>Built PaddleOCR pipelines extracting equipment tags, pipelines, and annotations from P&amp;ID engineering diagrams into structured JSON.</li>
                   <li>Developed image preprocessing that improved OCR accuracy on dense, low-contrast engineering drawings.</li>
@@ -84,20 +93,16 @@
           </div>
         </section>
 
-        <section>
+        <section id="work">
           <h2>Selected Work</h2>
           <div class="entries">
-            <!-- TODO: wrap each h3 title in <a href="https://github.com/vivekreddy049/REPO">...</a> once repo names are confirmed. -->
+            <!-- TODO: wrap each h3 in <a href="https://github.com/vivekreddy049/REPO">...</a> once repo names are confirmed. -->
             <div class="entry">
               <p class="time">2026</p>
               <div>
                 <h3>AI Job Agent</h3>
                 <p class="muted">Python, LangGraph, FastAPI, React, PostgreSQL, Docker</p>
-                <p>
-                  Production-ready multi-agent system for job discovery: LangGraph orchestration for autonomous
-                  reasoning and tool routing, a RAG pipeline over a vector store for context-aware recommendations,
-                  and SQLAlchemy-backed persistence behind JWT auth. Deployed on Vercel and Render with CI/CD.
-                </p>
+                <p>Multi-agent job-search system with LangGraph tool routing, a RAG pipeline over a vector store for context-aware recommendations, and SQLAlchemy persistence behind JWT auth. Deployed on Vercel and Render with CI/CD.</p>
               </div>
             </div>
             <div class="entry">
@@ -105,11 +110,7 @@
               <div>
                 <h3>Enterprise RAG Chatbot</h3>
                 <p class="muted">LangChain, LangGraph, ChromaDB, FAISS, FastAPI, Docker</p>
-                <p>
-                  Conversational assistant over a multi-format ingestion pipeline (PDF, DOCX, TXT) using semantic
-                  chunking and vector search for low-latency retrieval, with prompt engineering aimed at grounding
-                  answers and cutting hallucination. Exposed as a secure REST API, deployed via GitHub Actions.
-                </p>
+                <p>Conversational assistant over a multi-format ingestion pipeline (PDF, DOCX, TXT) using semantic chunking and vector search for low-latency retrieval, exposed as a secure REST API and shipped via GitHub Actions.</p>
               </div>
             </div>
             <div class="entry">
@@ -117,11 +118,7 @@
               <div>
                 <h3>Knowledge Graph Construction with LLMs</h3>
                 <p class="muted">LangChain, Neo4j, structured outputs</p>
-                <p>
-                  Information extraction pipeline that builds knowledge graphs from unstructured text — custom node
-                  and relationship schemas, structured-output prompting for entity and relation accuracy, and
-                  conversion into Neo4j for querying and visualisation.
-                </p>
+                <p>Information extraction pipeline building knowledge graphs from unstructured text, with custom node and relationship schemas and conversion into Neo4j for querying and visualisation.</p>
               </div>
             </div>
           </div>
