@@ -99,8 +99,12 @@ h1 {
 }
 
 .cursor {
-  color: var(--orange);
-  font-weight: 400;
+  display: inline-block;
+  width: 9px;
+  height: 0.8em;
+  margin-left: 6px;
+  background: var(--orange);
+  vertical-align: -0.02em;
   animation: blink 1.1s step-end infinite;
 }
 
