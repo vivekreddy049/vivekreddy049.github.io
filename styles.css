@@ -107,6 +107,18 @@ h1 {
   font-size: 14px;
 }
 
+.status {
+  margin: 14px 0 0;
+  padding: 7px 10px;
+  background: var(--soft);
+  border-left: 2px solid var(--orange);
+  font-size: 13px;
+}
+
+.status strong {
+  font-weight: 700;
+}
+
 .quicklinks {
   margin: 14px 0 0;
 }
