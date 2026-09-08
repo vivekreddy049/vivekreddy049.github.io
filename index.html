@@ -8,7 +8,7 @@
       name="description"
       content="Vivek Reddy builds LLM pipelines, retrieval systems, OCR and document-understanding tooling, and multi-agent backends."
     />
-    <link rel="stylesheet" href="./styles.css?v=7" />
+    <link rel="stylesheet" href="./styles.css?v=8" />
   </head>
   <body>
     <main class="page">
@@ -17,6 +17,7 @@
           <a class="active" href="/">Vivek Reddy</a>
           <a href="#work">Projects</a>
           <a href="#about">About</a>
+          <span class="hint"><kbd>/</kbd> to search</span>
         </nav>
 
         <header class="intro">
@@ -68,7 +69,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="experience">
           <h2>Experience</h2>
           <div class="entries">
             <div class="entry">
@@ -86,7 +87,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="education">
           <h2>Education</h2>
           <div class="entry">
             <p class="time">2022 - 2026</p>
@@ -128,7 +129,7 @@
           </div>
         </section>
 
-        <section>
+        <section id="skills">
           <h2>Skills</h2>
           <p class="skills">
             Python / C / C++ / JavaScript / PyTorch / Transformers / Hugging Face / LangChain / LangGraph / RAG /
@@ -137,7 +138,7 @@
           </p>
         </section>
 
-        <section>
+        <section id="links">
           <h2>Links</h2>
           <div class="links">
             <a href="mailto:vivekreddyiitg@gmail.com">vivekreddyiitg@gmail.com</a>
@@ -147,5 +148,119 @@
         </section>
       </article>
     </main>
+
+    <div class="palette-backdrop" id="palette" hidden>
+      <div class="palette" role="dialog" aria-modal="true" aria-label="Command palette">
+        <input id="palette-input" type="text" placeholder="Jump to a section, copy email, open a profile..."
+               autocomplete="off" spellcheck="false" aria-controls="palette-list" />
+        <ul id="palette-list" role="listbox" aria-label="Commands"></ul>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var box = document.getElementById('palette');
+        var input = document.getElementById('palette-input');
+        var list = document.getElementById('palette-list');
+        var last = null, cur = 0, shown = [];
+
+        function jump(id) {
+          var el = document.getElementById(id);
+          if (el) { el.scrollIntoView({ block: 'start' }); history.replaceState(null, '', '#' + id); }
+        }
+        function open_(url) { window.open(url, '_blank', 'noopener'); }
+        function copy(text, item) {
+          navigator.clipboard.writeText(text).then(function () {
+            item.tag = 'copied';
+            render(input.value);
+          }, function () { item.tag = 'press ctrl+c'; render(input.value); });
+          return true;
+        }
+
+        var email = 'vivekreddyiitg@gmail.com';
+        var items = [
+          { label: 'About', tag: 'section', run: function () { jump('about'); } },
+          { label: 'Experience', tag: 'section', run: function () { jump('experience'); } },
+          { label: 'Education', tag: 'section', run: function () { jump('education'); } },
+          { label: 'Selected Work', tag: 'section', run: function () { jump('work'); } },
+          { label: 'Skills', tag: 'section', run: function () { jump('skills'); } },
+          { label: 'Links', tag: 'section', run: function () { jump('links'); } },
+          { label: 'Copy email address', tag: email, run: function (i) { return copy(email, i); } },
+          { label: 'Open GitHub', tag: 'external', run: function () { open_('https://github.com/vivekreddy049'); } },
+          { label: 'Open LinkedIn', tag: 'external', run: function () { open_('https://www.linkedin.com/in/vivek-reddy-r-7050603a9/'); } },
+          { label: 'Email me', tag: 'mailto', run: function () { window.location.href = 'mailto:' + email; } }
+        ];
+
+        function render(q) {
+          var needle = q.trim().toLowerCase();
+          shown = items.filter(function (i) { return i.label.toLowerCase().indexOf(needle) !== -1; });
+          if (cur >= shown.length) cur = 0;
+          list.innerHTML = '';
+          if (!shown.length) {
+            var d = document.createElement('li');
+            d.className = 'empty';
+            d.textContent = 'No matches.';
+            list.appendChild(d);
+            return;
+          }
+          shown.forEach(function (item, n) {
+            var li = document.createElement('li');
+            li.setAttribute('role', 'option');
+            li.setAttribute('aria-selected', n === cur ? 'true' : 'false');
+            var a = document.createElement('span');
+            a.className = 'arrow';
+            a.textContent = n === cur ? '>' : ' ';
+            var t = document.createElement('span');
+            t.textContent = item.label;
+            var g = document.createElement('span');
+            g.className = 'tag';
+            g.textContent = item.tag;
+            li.appendChild(a); li.appendChild(t); li.appendChild(g);
+            li.addEventListener('mousemove', function () { cur = n; paint(); });
+            li.addEventListener('click', function () { fire(item); });
+            list.appendChild(li);
+          });
+        }
+        function paint() {
+          [].forEach.call(list.children, function (li, n) {
+            li.setAttribute('aria-selected', n === cur ? 'true' : 'false');
+            if (li.firstChild) li.firstChild.textContent = n === cur ? '>' : ' ';
+          });
+        }
+        function fire(item) {
+          var keep = item.run(item);
+          if (!keep) close();
+        }
+        function open() {
+          last = document.activeElement;
+          box.hidden = false;
+          input.value = '';
+          cur = 0;
+          render('');
+          input.focus();
+        }
+        function close() {
+          box.hidden = true;
+          items.forEach(function (i) { if (i.tag === 'copied' || i.tag === 'press ctrl+c') i.tag = email; });
+          if (last && last.focus) last.focus();
+        }
+
+        document.addEventListener('keydown', function (e) {
+          var typing = /^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName);
+          if (box.hidden) {
+            if ((e.key === '/' && !typing) || ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k')) {
+              e.preventDefault(); open();
+            }
+            return;
+          }
+          if (e.key === 'Escape') { e.preventDefault(); close(); }
+          else if (e.key === 'ArrowDown') { e.preventDefault(); if (shown.length) { cur = (cur + 1) % shown.length; paint(); } }
+          else if (e.key === 'ArrowUp') { e.preventDefault(); if (shown.length) { cur = (cur - 1 + shown.length) % shown.length; paint(); } }
+          else if (e.key === 'Enter') { e.preventDefault(); if (shown[cur]) fire(shown[cur]); }
+        });
+        input.addEventListener('input', function () { cur = 0; render(input.value); });
+        box.addEventListener('mousedown', function (e) { if (e.target === box) close(); });
+      })();
+    </script>
   </body>
 </html>
