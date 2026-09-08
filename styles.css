@@ -187,10 +187,6 @@ p {
   color: var(--muted);
 }
 
-.time::after {
-  content: " - ";
-}
-
 .muted {
   color: var(--muted);
 }
