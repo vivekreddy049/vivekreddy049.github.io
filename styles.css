@@ -1,30 +1,11 @@
 :root {
-  color-scheme: light dark;
-  --paper: #fcfcfd;
-  --ink: #17181d;
-  --body-ink: #35373f;
-  --muted: #6b6f7d;
-  --line: #e0e2e8;
-  --accent: #4a41b0;
-  --glow: rgba(118, 108, 245, 0.18);
-  --glow-strong: rgba(118, 108, 245, 0.3);
-  --desk: #dfe1e7;
-  --shadow: rgba(23, 24, 29, 0.13);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #17181c;
-    --ink: #e9e9ee;
-    --body-ink: #c6c8d2;
-    --muted: #9195a4;
-    --line: #2a2c34;
-    --accent: #a9a3ff;
-    --glow: rgba(129, 118, 255, 0.22);
-    --glow-strong: rgba(129, 118, 255, 0.36);
-    --desk: #0d0e11;
-    --shadow: rgba(0, 0, 0, 0.5);
-  }
+  color-scheme: light;
+  --paper: #fffaf0;
+  --ink: #201d19;
+  --muted: #6c6358;
+  --line: #ded5c6;
+  --accent: #0f8f68;
+  --glow: rgba(255, 225, 90, 0.34);
 }
 
 * {
@@ -38,7 +19,7 @@ html {
 body {
   min-height: 100%;
   margin: 0;
-  background: var(--desk);
+  background: #e9dfcf;
   color: var(--ink);
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -62,7 +43,7 @@ a {
   padding: clamp(28px, 6vw, 64px);
   background: var(--paper);
   border: 1px solid var(--line);
-  box-shadow: 0 24px 80px var(--shadow);
+  box-shadow: 0 24px 80px rgba(32, 29, 25, 0.12);
 }
 
 .intro {
@@ -89,13 +70,19 @@ h1 {
   font-size: clamp(42px, 9vw, 84px);
   font-weight: 650;
   line-height: 0.95;
-  letter-spacing: -0.015em;
+  letter-spacing: 0;
+}
+
+.devanagari {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: clamp(22px, 4vw, 32px);
 }
 
 .summary {
   max-width: 680px;
   margin: 28px 0 0;
-  color: var(--body-ink);
+  color: #39332d;
   font-size: clamp(18px, 2.4vw, 23px);
   line-height: 1.45;
 }
@@ -136,10 +123,6 @@ p {
   margin: 0;
 }
 
-.copy {
-  color: var(--body-ink);
-}
-
 .copy p + p {
   margin-top: 16px;
 }
@@ -160,8 +143,8 @@ h3 a:hover,
 .links a:focus-visible,
 h3 a:focus-visible {
   color: var(--accent);
-  background: var(--glow-strong);
-  box-shadow: 0 0 14px var(--glow);
+  background: rgba(255, 225, 90, 0.52);
+  box-shadow: 0 0 14px rgba(255, 225, 90, 0.28);
   outline: none;
 }
 
@@ -190,7 +173,6 @@ ul {
   list-style: none;
   margin: 10px 0 0;
   padding: 0;
-  color: var(--body-ink);
 }
 
 li {
@@ -207,7 +189,7 @@ li::before {
 }
 
 .skills {
-  color: var(--body-ink);
+  color: #39332d;
 }
 
 .links {
