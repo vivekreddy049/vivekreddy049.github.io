@@ -8,7 +8,17 @@
       name="description"
       content="Vivek Reddy builds LLM pipelines, retrieval systems, OCR and document-understanding tooling, and multi-agent backends."
     />
-    <link rel="stylesheet" href="./styles.css?v=8" />
+    <link rel="stylesheet" href="./styles.css?v=9" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dark' || t === 'terminal') {
+            document.documentElement.setAttribute('data-theme', t);
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <main class="page">
@@ -17,11 +27,14 @@
           <a class="active" href="/">Vivek Reddy</a>
           <a href="#work">Projects</a>
           <a href="#about">About</a>
-          <span class="hint"><kbd>/</kbd> to search</span>
+          <span class="navend">
+            <span class="hint"><kbd>/</kbd> to search</span>
+            <button class="mode" id="mode" type="button" aria-label="Change colour mode"></button>
+          </span>
         </nav>
 
         <header class="intro">
-          <h1>Vivek Reddy<span class="cursor" aria-hidden="true"></span></h1>
+          <h1>Vivek Reddy</h1>
           <p class="subname">AI / ML Engineer</p>
           <p class="summary">
             Building LLM pipelines, retrieval systems, and document understanding — turning messy real-world
@@ -158,6 +171,28 @@
     </div>
 
     <script>
+      window.setMode = (function () {
+        var modes = ['light', 'dark', 'terminal'];
+        var btn = document.getElementById('mode');
+        function current() {
+          var t = document.documentElement.getAttribute('data-theme');
+          if (modes.indexOf(t) !== -1) return t;
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        function set(mode) {
+          document.documentElement.setAttribute('data-theme', mode);
+          try { localStorage.setItem('theme', mode); } catch (e) {}
+          btn.textContent = '[' + mode + ']';
+        }
+        btn.textContent = '[' + current() + ']';
+        btn.addEventListener('click', function () {
+          set(modes[(modes.indexOf(current()) + 1) % modes.length]);
+        });
+        return set;
+      })();
+    </script>
+
+    <script>
       (function () {
         var box = document.getElementById('palette');
         var input = document.getElementById('palette-input');
@@ -188,7 +223,10 @@
           { label: 'Copy email address', tag: email, run: function (i) { return copy(email, i); } },
           { label: 'Open GitHub', tag: 'external', run: function () { open_('https://github.com/vivekreddy049'); } },
           { label: 'Open LinkedIn', tag: 'external', run: function () { open_('https://www.linkedin.com/in/vivek-reddy-r-7050603a9/'); } },
-          { label: 'Email me', tag: 'mailto', run: function () { window.location.href = 'mailto:' + email; } }
+          { label: 'Email me', tag: 'mailto', run: function () { window.location.href = 'mailto:' + email; } },
+          { label: 'Mode: light', tag: 'theme', run: function () { window.setMode('light'); } },
+          { label: 'Mode: dark', tag: 'theme', run: function () { window.setMode('dark'); } },
+          { label: 'Mode: terminal', tag: 'theme', run: function () { window.setMode('terminal'); } }
         ];
 
         function render(q) {
