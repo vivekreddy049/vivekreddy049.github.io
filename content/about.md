@@ -11,9 +11,9 @@ applications, and document-understanding tooling that turns messy, real-world in
 into structured data a program can actually trust.
 
 I hold a B.Tech in Mathematics and Computing from
-[IIT Guwahati](https://www.iitg.ac.in/). My day-to-day is the unglamorous end of ML:
-OCR and diagram parsing, RAG that stays honest, multi-agent orchestration, and shipping
-FastAPI services that are reproducible rather than impressive once.
+[IIT Guwahati](https://www.iitg.ac.in/). At **Flagestrator** I worked on an OCR
+pipeline for engineering diagrams — extracting equipment tags, pipelines, and
+annotations from dense P&ID drawings into structured JSON.
 
 ### What I work with
 
