@@ -1,0 +1,91 @@
+baseURL = "https://vivekreddy049.github.io/"
+languageCode = "en-us"
+title = "Vivek Reddy"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+enableEmoji = true
+buildDrafts = false
+buildFuture = false
+pygmentsUseClasses = true
+
+[minify]
+  disableXML = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  env = "production"
+  description = "Vivek Reddy — AI / ML Engineer. Projects, demos, and how to get in touch."
+  author = "Vivek Reddy"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowToc = false
+  hidemeta = false
+  disableScrollToTop = false
+
+  [params.profileMode]
+    enabled = true
+    title = "Vivek Reddy"
+    subtitle = "AI / ML Engineer — LLM pipelines, retrieval systems, and document-understanding tooling that turns messy input into structured data a program can trust."
+
+    [[params.profileMode.buttons]]
+      name = "Projects"
+      url = "projects"
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "about"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/vivekreddy049"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/vivek-reddy-r-7050603a9/"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:vivekreddyiitg@gmail.com"
+
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 30
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 40
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  noClasses = false
+  codeFences = true
+  guessSyntax = true
+  lineNos = false
