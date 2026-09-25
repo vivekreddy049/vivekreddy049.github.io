@@ -33,7 +33,7 @@ pygmentsUseClasses = true
   [params.profileMode]
     enabled = true
     title = "Vivek Reddy"
-    subtitle = "AI / ML Engineer — LLM pipelines, retrieval systems, and document-understanding tooling that turns messy input into structured data a program can trust."
+    subtitle = "AI / ML Engineer — LLM pipelines, retrieval systems, and OCR for engineering diagrams. Currently looking for internship and full-time opportunities."
 
     [[params.profileMode.buttons]]
       name = "Projects"
