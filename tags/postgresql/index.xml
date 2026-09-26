@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PostgreSQL on Vivek Reddy</title>
+    <link>https://vivekreddy049.github.io/tags/postgresql/</link>
+    <description>Recent content in PostgreSQL on Vivek Reddy</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vivekreddy049.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Job Agent</title>
+      <link>https://vivekreddy049.github.io/projects/ai-job-agent/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/projects/ai-job-agent/</guid>
+      <description>Multi-agent job-search system with LangGraph tool routing and a RAG pipeline for context-aware recommendations.</description>
+    </item>
+  </channel>
+</rss>

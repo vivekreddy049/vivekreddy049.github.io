@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Vivek Reddy</title>
+    <link>https://vivekreddy049.github.io/tags/</link>
+    <description>Recent content in Tags on Vivek Reddy</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://vivekreddy049.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker</title>
+      <link>https://vivekreddy049.github.io/tags/docker/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FastAPI</title>
+      <link>https://vivekreddy049.github.io/tags/fastapi/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/fastapi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangGraph</title>
+      <link>https://vivekreddy049.github.io/tags/langgraph/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/langgraph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>https://vivekreddy049.github.io/tags/postgresql/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://vivekreddy049.github.io/tags/rag/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://vivekreddy049.github.io/tags/react/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ChromaDB</title>
+      <link>https://vivekreddy049.github.io/tags/chromadb/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/chromadb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FAISS</title>
+      <link>https://vivekreddy049.github.io/tags/faiss/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/faiss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LangChain</title>
+      <link>https://vivekreddy049.github.io/tags/langchain/</link>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/langchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Information Extraction</title>
+      <link>https://vivekreddy049.github.io/tags/information-extraction/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/information-extraction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://vivekreddy049.github.io/tags/llm/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neo4j</title>
+      <link>https://vivekreddy049.github.io/tags/neo4j/</link>
+      <pubDate>Sun, 01 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://vivekreddy049.github.io/tags/neo4j/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
