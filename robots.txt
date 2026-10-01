@@ -1,3 +1,4 @@
-User-agent: *
-Disallow:
+User-Agent: *
+Allow: /
+
 Sitemap: https://vivekreddy049.github.io/sitemap.xml

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[493],{4874:(e,s,u)=>{u.r(s),u.d(s,{ScrollTrigger:()=>a.u,gsap:()=>r.os});var r=u(7605),a=u(5580);r.os.registerPlugin(a.u),r.os.defaults({ease:"expo.out",duration:.9})}}]);
